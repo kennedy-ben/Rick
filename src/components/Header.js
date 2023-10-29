@@ -4,11 +4,11 @@ function Header() {
   return (
     <div className="header">
       <div className="left">
-        <a href="/">Home</a>
+        <a> Home </a>
       </div>
-      <div className="right">
+       {/* <div className="right">
         <input type="text" placeholder="Search" />
-      </div>
+      </div>  */}
     </div>
   )
 }
