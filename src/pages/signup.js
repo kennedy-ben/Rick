@@ -13,29 +13,38 @@ export default class SignUp extends Component {
               type="text"
               className="form-control"
               placeholder="First name"
+              style={styles.input}
             />
           </div>
 
           <div className="mb-3">
             <label>Last name</label>
-            <input type="text" className="form-control" placeholder="Last name" />
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Last name"
+              style={styles.input}
+            />
           </div>
+   
 
           <div className="mb-3">
-            <label>Email address</label>
+            <label>Email adress</label>
             <input
               type="email"
               className="form-control"
               placeholder="Enter email"
+              style={styles.input}
             />
           </div>
 
           <div className="mb-3">
-            <label>Password</label>
+            <label> Password  </label>
             <input
               type="password"
               className="form-control"
               placeholder="Enter password"
+              style={styles.input}
             />
           </div>
 
@@ -60,13 +69,21 @@ const styles = {
     alignItems: 'center',
     minHeight: '100vh',
     margin: 0,
-    background: '#f0f0f0',
+    background: '#f9f9f9',
   },
   form: {
     width: '50%',
-    backgroundColor: '#ffffff', 
-    padding: '200px',
-    borderRadius: '100px',
+    backgroundColor: '#AAA',
+    padding: '50px',
+    borderRadius: '10px',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  input: {
+    width: '100%',
+    marginBottom: '10px',
+    padding: '10px',
   },
 };

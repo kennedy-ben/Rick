@@ -1,27 +1,36 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class Login extends Component {
   render() {
     const containerStyle = {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: '100vh', 
-      
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      minHeight: "100vh", 
+      background: "#f9f9f9",
     };
 
     const formStyle = {
-        width: '50%',
-      padding: '20opx',
-      border: '1px solid #ccc',
-      borderRadius: '100px',
-      boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+      width: "50%",
+      backgroundColor: "#AAA", 
+      padding: "50px",
+      borderRadius: "10px",
+      boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+    };
+
+    const inputStyle = {
+      width: "100%", 
+      marginBottom: "10px",
+      padding: "10px", 
     };
 
     return (
       <div style={containerStyle}>
         <form style={formStyle}>
-          <h3 style={{ textAlign: 'center' }}>Log In</h3>
+          <h3 style={{ textAlign: "center" }}>Log In</h3>
 
           <div className="mb-3">
             <label>Email address</label>
@@ -29,6 +38,7 @@ export default class Login extends Component {
               type="email"
               className="form-control"
               placeholder="Enter email"
+              style={inputStyle}
             />
           </div>
 
@@ -38,6 +48,7 @@ export default class Login extends Component {
               type="password"
               className="form-control"
               placeholder="Enter password"
+              style={inputStyle}
             />
           </div>
 

@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Header from "./Header";
 import React from "react";
 
 function home() {
@@ -12,6 +12,7 @@ function home() {
           <input type="text" placeholder="Search" />
         </div> 
       </div>
+      
     );
   }
   
