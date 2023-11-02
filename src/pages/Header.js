@@ -6,11 +6,14 @@ function Header() {
       <div className="left">
         <a> Home </a>
       </div>
-       {/* <div className="right">
-        <input type="text" placeholder="Search" />
-      </div>  */}
+      <div className="left">
+      <a href="/">Characters</a>
+        <a href='/'> Location </a>
+        <a href='/'> Episode</a>
+      </div>
     </div>
   )
 }
 
 export default Header;
+

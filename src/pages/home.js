@@ -8,9 +8,9 @@ function home() {
           <Header />
           {/* <a href="/">Home</a> */}
         </div>
-         <div className="right">
+         {/* <div className="right">
           <input type="text" placeholder="Search" />
-        </div> 
+        </div>  */}
       </div>
       
     );
