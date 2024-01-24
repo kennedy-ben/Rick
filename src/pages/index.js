@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
-import characters from "./characters";
-// import Characters from "./characters"
+ import Characters from "./characters"
+ import Episodes from "./episode";
 
 function Index() {
   const headingStyle = {
@@ -13,13 +13,16 @@ function Index() {
   return (
     <div>
       <Header />
-      {/* <Characters/> */}
+      <br/>
+      <br/>
+    <div className="center">
+        <input type="text" placeholder="Search" className="search-bar" />
+      </div>
       <h1 style={headingStyle}>
         Hello Welcome To My New Api Of Ricky And Morty
       </h1>
-      <div className="center">
-        <input type="text" placeholder="Search" className="search-bar" />
-      </div>
+      <Characters/> 
+      <Episodes/>
       <br/>
       <br/>
       <ul></ul>

@@ -3,29 +3,23 @@ import axios from "axios";
 
 function Characters() {
   const [data, setData] = useState([]);
+  const [page, setPage] = useState(1);
+
   useEffect(() => {
-    axios.get("https://rickandmortyapi.com/api/character")
-      .then((res) => setData(res.data.results))
+    axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`)
+      .then((res) => setData((prevData) => [...prevData, ...res.data.results]))
       .catch((err) => console.log(err));
-  }, []);
+  }, [page]);
+
+  const loadMoreCharacters = () => {
+    setPage((prevPage) => prevPage + 1);
+  };
 
   return (
     <div className="container">
       <div className="mt-3">
-        <h3>Fetching data from API in Axios</h3>
+        {/* <h3>Welcome these are the all Characters</h3> */}
         <table className="table">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Status</th>
-              <th>Gender</th>
-              <th>Species</th>
-              <th>Origin</th>
-              <th>Location</th>
-              <th>Image</th>
-            </tr>
-          </thead>
           <tbody>
             {data.map((character) => (
               <tr key={character.id}>
@@ -43,6 +37,7 @@ function Characters() {
             ))}
           </tbody>
         </table>
+        <button onClick={loadMoreCharacters}>Load More</button>
       </div>
     </div>
   );

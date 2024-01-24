@@ -7,9 +7,9 @@ function Header() {
         <a> Home </a>
       </div>
       <div className="left">
-      <a href="/">Characters</a>
-        <a href='/'> Location </a>
-        <a href='/'> Episode</a>
+      <a href="/Characters">Characters</a>
+        <a href='/Location'> Location </a>
+        <a href='/Episode'> Episode</a>
       </div>
     </div>
   )
