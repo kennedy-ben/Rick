@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
  import Characters from "./characters"
- import Episodes from "./episode";
+//  import Episodes from "./episode";
 
 function Index() {
   const headingStyle = {
@@ -22,7 +22,7 @@ function Index() {
         Hello Welcome To My New Api Of Ricky And Morty
       </h1>
       <Characters/> 
-      <Episodes/>
+      {/* <Episodes/> */}
       <br/>
       <br/>
       <ul></ul>
